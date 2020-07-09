@@ -1,0 +1,14 @@
+Sparsity	Method	Mean Distance(mm)			Percentage(<1mm)			Percentage(<2mm)		
+		Acc	Comp	Overall	Precision	Recall	f-score	Precision	Recall	f-score
+1	SurfaceNet	0.45	1.02	0.735	84.49	64.58	71.65	89.1	68.72	76.21
+2	SurfaceNet	0.455	1.011	0.733	81.62	65.79	70.96	86.67	69.77	75.56
+3	SurfaceNet	0.461	0.997	0.729	83.02	61.09	68.87	88.31	66.39	74.41
+4	SurfaceNet	0.452	0.956	0.704	78.24	53.88	62.17	83.42	58.88	67.5
+5	SurfaceNet	0.445	0.948	0.701	81.07	58.62	66.55	85.4	62.76	70.97
+6	SurfaceNet	0.471	1.033	0.752	75.5	51.64	59.58	79.86	57.16	64.99
+7	SurfaceNet	0.688	1.13	0.909	66.86	36.91	50.24	69.21	46.91	61.7
+8	SurfaceNet	0.713	1.541	1.127	62.33	37.14	48.92	67.36	44.01	60.52
+9	SurfaceNet	1.112	2.176	1.644	35.84	29.53	31.47	38.36	34.01	35.49
+10	SurfaceNet	empty	empty	empty	22.91	10.32	12.68	26.22	16.68	24.87
+11	SurfaceNet	empty	empty	empty	empty	empty	empty	empty	empty	empty
+
