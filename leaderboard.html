@@ -120,18 +120,19 @@
               <h6 class="m-0 font-weight-bold text-primary">LeaderBoard</h6>
             </div>
             <div class="card-body">
-            	    Sparsity:<select id='selector' class="form-control" style="width:100px;height:34px">
-						　　　　<option value="1">01</option>
-						　　　　<option value="2">02</option>
-						　　　　<option value="3">03</option>
-						　　　　<option value="4">04</option>
-						　　　　<option value="5">05</option>
-						　　　　<option value="6">06</option>
-						　　　　<option value="7">11</option>
-			　　　　		　　　</select>	
+
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" border="3"
 			 		cellspacing="0">
+	 		           Sparsity:<select id='selector' class="form-control" style="width:100px;height:34px">
+				　　　　<option value="1">01</option>
+				　　　　<option value="2">02</option>
+				　　　　<option value="3">03</option>
+				　　　　<option value="4">04</option>
+				　　　　<option value="5">05</option>
+				　　　　<option value="6">06</option>
+				　　　　<option value="7">11</option>
+	　　　　		　　　</select>	
                   <thead>
                     <tr>
                       <th rowspan="2", weight="70%">Ranking</th>
@@ -787,6 +788,7 @@
 	    	"destroy": true,
 	    	'paging':false,
 	    	"bAutoWidth": true,
+	    	"bFilter": false,
 	     	"aoColumnDefs": [
 	          { 'bSortable': false, 'aTargets': [ 0 ] }
 	       ]
