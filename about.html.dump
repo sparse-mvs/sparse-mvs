@@ -106,23 +106,23 @@
         <p>  The sparse-MVS leader-board is based on two datasets, <a href="http://roboimagedata.compute.dtu.dk/?page_id=36">DTU dataset</a> and <a href="https://www.tanksandtemples.org/">Tanks-and-Temples (T&amp;T) dataset</a>.
  The sparse MVS setting in our leader-board selects a small proportion 
 of the camera views by consecutively sampling a view from every sparsity
- = n camera index, i.e., {1, n + 1, 2n + 1, · · · }. In reality, it is 
+ = n camera index, i.e., {1, n + 1, 2n + 1, 路 路 路 }. In reality, it is 
 also practical to sample small-batches of images at sparse viewpoints, 
 i.e., grouping batches of views with certain Batchsize at the previously
  defined sparse viewpoints with a certain Sparsity. When Sparsity = 3 
-and Batchsize = 1, the chosen camera indexes are 1 / 4 / 7 / 10 / · · · .
+and Batchsize = 1, the chosen camera indexes are 1 / 4 / 7 / 10 / 路 路 路 .
  When Sparsity = 3 and Batchsize = 2, the chosen camera indexes are 1,2 /
- 4,5 / 7,8 / 10,11 / · · · . </p>
+ 4,5 / 7,8 / 10,11 / 路 路 路 . </p>
         <p>The figure below depicts the relationship between sparsity n 
-and the average baseline angle θ averaging over all the ground-truth 
+and the average baseline angle 胃 averaging over all the ground-truth 
 points in the 22 models of the DTU dataset and 8 models of the Tanks and
  Temples intermediate dataset respectively. Note that, for simplicity, 
 only the nearest view pairs are considered to calculate the baseline 
 angle statistics.</p>
         <p>
         As the sparsity increases n = 1, ..., 11, the average baseline 
-angle θ, defined by the intersected projection rays, gradually grows in a
- large range, e.g. reaching more than 70° in both DTU and T&amp;T 
+angle 胃, defined by the intersected projection rays, gradually grows in a
+ large range, e.g. reaching more than 70掳 in both DTU and T&amp;T 
 datasets. So this sparse-MVS setting is reasonable by not only covering 
 various degrees of sparsity but also containing irregular sampling 
 locations.
@@ -211,7 +211,7 @@ the average of the mean precision and mean recall.
 </div>
 <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright © luvision.net</p>
+      <p class="m-0 text-center text-white">Copyright 漏 luvision.net</p>
     </div>
     <!-- /.container -->
   </footer>

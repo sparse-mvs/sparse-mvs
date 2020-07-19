@@ -200,13 +200,13 @@
       <div class="col-md-12">
         <!-- <h2>Modern Business Features</h2> -->
         <p> We propose an imperative sparse-MVS leaderboard and call for
- the community’s attention on the general sparse MVS problem with large 
+ the community鈥檚 attention on the general sparse MVS problem with large 
 range of baseline angles. The proposed sparse-MVS leader-board is built 
 on the large-scale <a href="http://roboimagedata.compute.dtu.dk/?page_id=36">DTU dataset</a> and <a href="https://www.tanksandtemples.org/">Tanks-and-Temples dataset</a>
  with sparsely sampled camera views. The sparse-MVS setting selects one 
 view from every n consecutive camera index, i.e., {1, n + 1, 2n + 
 1,...}, where n is termed as Sparsity positively related with baseline 
-angle θ. 
+angle 胃. 
         The poor performance of the state-of-the-art MVS algorithms on 
 the proposed leader-board demonstrates the necessity of further effort 
 and attention from the community on the achieving MVS with various 
@@ -393,7 +393,7 @@ neque nemo praesentium cum alias asperiores commodi.</p>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright © luvision.net</p>
+      <p class="m-0 text-center text-white">Copyright 漏 luvision.net</p>
     </div>
     <!-- /.container -->
   </footer>
