@@ -27,6 +27,7 @@
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -109,24 +110,32 @@
           <!-- Page Heading -->
           <p></p>
 
-          
-
           <h1 class="h3 mb-2 text-gray-800">Tables</h1>
           <p class="mb-4">Quantitative results of reconstruction quality on the <a href="http://roboimagedata.compute.dtu.dk/?page_id=36">DTU dataset</a>. in terms of the distance metric(lower is better) and the percentage metric (see Descriptions for more details) with 1mm and 2mm as thresholds. To understand the experiment settings and evaluation rules, check <a href="services.html">Submissions</a> and <a href="about.html">Description</a>.
           <p>
           To show the leaderboard at each Sparsity, just search the sparsity index (e.g., search "Five" if sparsity=5 in the search bar and then click the matric you want to rank.). To show the performance changes with sparsity for each method,just click the method colume. The reference and the project page of each method can be find in Reference.</p>
-
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">LeaderBoard</h6>
             </div>
             <div class="card-body">
+
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" width="100%" border="3"
+			 		cellspacing="0">
+	 		           Sparsity:<select id='selector' class="form-control" style="width:100px;height:34px">
+				　　　　<option value="1">01</option>
+				　　　　<option value="2">02</option>
+				　　　　<option value="3">03</option>
+				　　　　<option value="4">04</option>
+				　　　　<option value="5">05</option>
+				　　　　<option value="6">06</option>
+				　　　　<option value="7">11</option>
+	　　　　		　　　</select>	
                   <thead>
                     <tr>
-                      <th rowspan="2">Sparsity</th>
+                      <th rowspan="2", weight="70%">Ranking</th>
                       <th rowspan="2">Method</th>
                       <th colspan="3">Mean Distance(mm)</th>
                       <th colspan="3">Percentage(<1mm)</th>
@@ -161,472 +170,6 @@
                     <!-- <tr class="group">
                       <td colspan="5">One</td>
                     </tr> -->
-                    <tr class="odd">
-                      <td>01 (One)</td>
-                      <td>SurfaceNet+</td>
-                      <td>0.385</td>
-                      <td>0.448</td>
-                      <td>0.416</td>
-                      <td>88.01</td>
-                      <td>73.01</td>
-                      <td>78.44</td>
-                      <td>92.33</td>
-                      <td>78.1</td>
-                      <td> 83.55</td>
-                    </tr>
-                    <tr class="odd">
-                      <td>01 (One)</td>
-                      <td>SurfaceNet</td>
-                      <td>0.450</td>
-                      <td>1.021</td>
-                      <td>0.735 </td>
-                      <td>84.49</td>
-                      <td>64.58</td>
-                      <td>71.65</td>
-                      <td>89.10</td>
-                      <td>68.72</td>
-                      <td>76.21</td>
-                    </tr>
-                    <tr class="odd">
-                      <td>01 (One)</td>
-                      <td>Gipuma</td>
-                      <td>0.283</td>
-                      <td>0.873</td>
-                      <td>0.578</td>
-                      <td>94.65</td>
-                      <td>59.93</td>
-                      <td>70.64</td>
-                      <td>96.42</td>
-                      <td>63.81</td>
-                      <td>74.16</td>
-                    </tr>
-                    <tr class="odd">
-                      <td>01 (One)</td>
-                      <td>R-MVSNet</td>
-                      <td>0.383</td>
-                      <td>0.452</td>
-                      <td>0.417</td>
-                      <td>87.63</td>
-                      <td>72.48</td>
-                      <td>77.09</td>
-                      <td>91.74</td>
-                      <td>76.39</td>
-                      <td>82.01</td>
-                    </tr>
-                    <tr class="odd">
-                      <td>01 (One)</td>
-                      <td>COLMAP</td>
-                      <td>0.411</td>
-                      <td>0.657</td>
-                      <td>0.534</td>
-                      <td>82.24</td>
-                      <td>52.48</td>
-                      <td>61.34</td>
-                      <td>88.26</td>
-                      <td>62.2</td>
-                      <td>72.93</td>
-                    </tr>
-                    <hr>
-
-                    <tr class="even">
-                      <td>02 (Two)</td>
-                      <td>SurfaceNet+</td>
-                      <td>0.448</td>
-                      <td>0.437</td>
-                      <td>0.442</td>
-                      <td>87.35</td>
-                      <td>73.59</td>
-                      <td>78.29</td>
-                      <td>91.73</td>
-                      <td>78.08</td>
-                      <td>83.21</td>
-                    </tr>
-                    <tr class="even">
-                      <td>02 (Two)</td>
-                      <td>SurfaceNet</td>
-                      <td>0.455</td>
-                      <td>1.011</td>
-                      <td>0.733</td>
-                      <td>81.62</td>
-                      <td>65.79</td>
-                      <td>70.96</td>
-                      <td>86.67</td>
-                      <td>69.77</td>
-                      <td>75.56</td>
-                    </tr>
-                    <tr class="even">
-                      <td>02 (Two)</td>
-                      <td>Gipuma</td>
-                      <td>0.292</td>
-                      <td>1.124</td>
-                      <td>0.708</td>
-                      <td>94.66</td>
-                      <td>55.14</td>
-                      <td>67</td>
-                      <td>96.84</td>
-                      <td>60.87</td>
-                      <td>72.18</td>
-                    </tr>
-                    <tr class="even">
-                      <td>02 (Two)</td>
-                      <td>R-MVSNet</td>
-                      <td>0.471</td>
-                      <td>0.499</td>
-                      <td>0.485</td>
-                      <td>86.96</td>
-                      <td>60.04</td>
-                      <td>67.99</td>
-                      <td>95.05</td>
-                      <td>65.71</td>
-                      <td>74.69</td>
-                    </tr>
-                    <tr class="even">
-                      <td>02 (Two)</td>
-                      <td>COLMAP</td>
-                      <td>0.49</td>
-                      <td>1.108</td>
-                      <td>0.799</td>
-                      <td>82.05</td>
-                      <td>50.58</td>
-                      <td>61.07</td>
-                      <td>89.86</td>
-                      <td>56.76</td>
-                      <td>69.17</td>
-                    </tr>
-
-
-                    <tr>
-                      <td>03 (Three)</td>
-                      <td>SurfaceNet+</td>
-                      <td>0.446</td>
-                      <td>0.482</td>
-                      <td>0.464</td>
-                      <td>86.06</td>
-                      <td>74.41</td>
-                      <td>78.15</td>
-                      <td>90.87</td>
-                      <td>78.25</td>
-                      <td>82.91</td>
-                    </tr>
-                    <tr>
-                      <td>03 (Three)</td>
-                      <td>SurfaceNet</td>
-                      <td>0.461</td>
-                      <td>0.997</td>
-                      <td>0.729</td>
-                      <td>83.02</td>
-                      <td>61.09</td>
-                      <td>68.87</td>
-                      <td>88.31</td>
-                      <td>66.39</td>
-                      <td>74.41</td>
-                    </tr>
-                    <tr>
-                      <td>03 (Three)</td>
-                      <td>Gipuma</td>
-                      <td>0.267</td>
-                      <td>1.252</td>
-                      <td>0.759</td>
-                      <td>95.51</td>
-                      <td>50.88</td>
-                      <td>64.63</td>
-                      <td>97.49</td>
-                      <td>50.33</td>
-                      <td>63.68</td>
-                    </tr>
-                    <tr>
-                      <td>03 (Three)</td>
-                      <td>R-MVSNet</td>
-                      <td>0.465</td>
-                      <td>1.012</td>
-                      <td>0.738</td>
-                      <td>89.55</td>
-                      <td>48.03</td>
-                      <td>59.28</td>
-                      <td>96.96</td>
-                      <td>57.92</td>
-                      <td>69.04</td>
-                    </tr>
-                    <tr>
-                      <td>03 (Three)</td>
-                      <td>COLMAP</td>
-                      <td>0.467</td>
-                      <td>1.090</td>
-                      <td>0.778</td>
-                      <td>78.45</td>
-                      <td>49.26</td>
-                      <td>59.62</td>
-                      <td>91.44</td>
-                      <td>55.98</td>
-                      <td>65.77</td>
-                    </tr>
-
-                    <tr>
-                      <td>04 (Four)</td>
-                      <td>SurfaceNet+</td>
-                      <td>0.495</td>
-                      <td>0.467</td>
-                      <td>0.478</td>
-                      <td>87.06</td>
-                      <td>72.14</td>
-                      <td>77.41</td>
-                      <td>91.36</td>
-                      <td>77.15</td>
-                      <td>82.57</td>
-                    </tr>
-                    <tr>
-                      <td>04 (Four)</td>
-                      <td>SurfaceNet</td>
-                      <td>0.452</td>
-                      <td>0.956</td>
-                      <td>0.704</td>
-                      <td>78.24</td>
-                      <td>53.88</td>
-                      <td>62.17</td>
-                      <td>83.42</td>
-                      <td>58.88</td>
-                      <td>67.50</td>
-                    </tr>
-                    <tr>
-                      <td>04 (Four)</td>
-                      <td>Gipuma</td>
-                      <td>0.482</td>
-                      <td>1.248</td>
-                      <td>0.865</td>
-                      <td>91.95</td>
-                      <td>46.65</td>
-                      <td>59.76</td>
-                      <td>94.95</td>
-                      <td>55.16</td>
-                      <td>67.71</td>
-                    </tr>
-                    <tr>
-                      <td>04 (Four)</td>
-                      <td>R-MVSNet</td>
-                      <td>0.46</td>
-                      <td>1.425</td>
-                      <td>0.9425</td>
-                      <td>88.17</td>
-                      <td>32.02</td>
-                      <td>44.92</td>
-                      <td>93.66</td>
-                      <td>44.21</td>
-                      <td>57.55</td>
-                    </tr>
-                    <tr>
-                      <td>04 (Four)</td>
-                      <td>COLMAP</td>
-                      <td>0.473</td>
-                      <td>1.332</td>
-                      <td>0.9025</td>
-                      <td>82.05</td>
-                      <td>38.28</td>
-                      <td>51.27</td>
-                      <td>92.05</td>
-                      <td>56.18</td>
-                      <td>67.23</td>
-                    </tr>
-
-                    <tr>
-                      <td>05 (Five)</td>
-                      <td>SurfaceNet+</td>
-                      <td>0.466</td>
-                      <td>0.491</td>
-                      <td>0.469</td>
-                      <td>88.58</td>
-                      <td>71.63</td>
-                      <td>77.48</td>
-                      <td>92.86</td>
-                      <td>76.04</td>
-                      <td>82.28</td>
-                    </tr>
-                    <tr>
-                      <td>05 (Five)</td>
-                      <td>SurfaceNet</td>
-                      <td>0.445</td>
-                      <td>0.948</td>
-                      <td>0.701</td>
-                      <td>81.07</td>
-                      <td>58.62</td>
-                      <td>66.55</td>
-                      <td>85.40</td>
-                      <td>62.76</td>
-                      <td>70.97</td>
-                    </tr>
-                    <tr>
-                      <td>05 (Five)</td>
-                      <td>Gipuma</td>
-                      <td>0.46</td>
-                      <td>1.633</td>
-                      <td>1.046</td>
-                      <td>92.38</td>
-                      <td>38.53</td>
-                      <td>52.36</td>
-                      <td>95.1</td>
-                      <td>48.15</td>
-                      <td>61.78</td>
-                    </tr>
-                    <tr>
-                      <td>05 (Five)</td>
-                      <td>R-MVSNet</td>
-                      <td>0.329</td>
-                      <td>2.209</td>
-                      <td>1.269</td>
-                      <td>89.26</td>
-                      <td>20.51</td>
-                      <td>31.6</td>
-                      <td>93.99</td>
-                      <td>32.74</td>
-                      <td>46.37</td>
-                    </tr>
-                    <tr>
-                      <td>05 (Five)</td>
-                      <td>COLMAP</td>
-                      <td>0.443</td>
-                      <td>1.284</td>
-                      <td>0.8635</td>
-                      <td>88.79</td>
-                      <td>42.51</td>
-                      <td>55.94</td>
-                      <td>92.91</td>
-                      <td>54.89</td>
-                      <td>65.77</td>
-                    </tr>
-
-                    <tr>
-                      <td>06 (Six)</td>
-                      <td>SurfaceNet+</td>
-                      <td>0.48</td>
-                      <td>0.511</td>
-                      <td>0.496</td>
-                      <td>86.74</td>
-                      <td>67.26</td>
-                      <td>74.93</td>
-                      <td>92.05</td>
-                      <td>72.19</td>
-                      <td>80.64</td>
-                    </tr>
-                    <tr>
-                      <td>06 (Six)</td>
-                      <td>SurfaceNet</td>
-                      <td>0.471</td>
-                      <td>1.033</td>
-                      <td>0.752</td>
-                      <td>75.5</td>
-                      <td>51.64</td>
-                      <td>59.58</td>
-                      <td>79.86</td>
-                      <td>57.16</td>
-                      <td>64.99</td>
-                    </tr>
-                    <tr>
-                      <td>06 (Six)</td>
-                      <td>Gipuma</td>
-                      <td>0.46</td>
-                      <td>1.702</td>
-                      <td>1.081</td>
-                      <td>92.46</td>
-                      <td>30.37</td>
-                      <td>43.99</td>
-                      <td>95.32</td>
-                      <td>40.8</td>
-                      <td>55.28</td>
-                    </tr>
-                    <tr>
-                      <td>06 (Six)</td>
-                      <td>R-MVSNet</td>
-                      <td>0.327</td>
-                      <td>2.851</td>
-                      <td>1.589</td>
-                      <td>91.65</td>
-                      <td>8.49</td>
-                      <td>14.28</td>
-                      <td>94.7</td>
-                      <td>16.6</td>
-                      <td>26.28</td>
-                    </tr>
-                    <tr>
-                      <td>06 (Six)</td>
-                      <td>COLMAP</td>
-                      <td>0.462</td>
-                      <td>1.531</td>
-                      <td>0.9965</td>
-                      <td>76.6</td>
-                      <td>35.49</td>
-                      <td>32</td>
-                      <td>77.55</td>
-                      <td>50.21</td>
-                      <td>52.52</td>
-                    </tr>
-
-                    <tr>
-                      <td>11 (Eleven)</td>
-                      <td>SurfaceNet+</td>
-                      <td>0.445</td>
-                      <td>0.88</td>
-                      <td>0.663</td>
-                      <td>85.81</td>
-                      <td>51.52</td>
-                      <td>61.54</td>
-                      <td>90.05</td>
-                      <td>55.41</td>
-                      <td>65.99</td>
-                    </tr>
-                    <tr>
-                      <td>11 (Eleven)</td>
-                      <td>SurfaceNet</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                    </tr>
-                    <tr>
-                      <td>11 (Eleven)</td>
-                      <td>Gipuma</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                    </tr>
-                    <tr>
-                      <td>11 (Eleven)</td>
-                      <td>R-MVSNet</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                    </tr>
-                    <tr>
-                      <td>11 (Eleven)</td>
-                      <td>COLMAP</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                      <td>empty</td>
-                    </tr>
-
-
-
                   </tbody>
                 </table>
               </div>
@@ -769,6 +312,545 @@
   <script src="js/demo/datatables-demo.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart_leaderboard.js"></script>
+
+  <script>
+		sparsity1 = [[
+		"1",
+		"SurfaceNet+",
+		"0.385",
+		"0.448",
+		"0.416",
+		"88.01",
+		"73.01",
+		"78.44",
+		"92.33",
+		"78.1",
+		" 83.55"
+		],
+		[
+		"2",
+		"SurfaceNet",
+		"0.450",
+		"1.021",
+		"0.735 ",
+		"84.49",
+		"64.58",
+		"71.65",
+		"89.10",
+		"68.72",
+		"76.21"
+		],
+		[
+		"3",
+		"Gipuma",
+		"0.283",
+		"0.873",
+		"0.578",
+		"94.65",
+		"59.93",
+		"70.64",
+		"96.42",
+		"63.81",
+		"74.16"
+		],
+		[
+		"4",
+		"R-MVSNet",
+		"0.383",
+		"0.452",
+		"0.417",
+		"87.63",
+		"72.48",
+		"77.09",
+		"91.74",
+		"76.39",
+		"82.01"
+		],
+		[
+		"5",
+		"COLMAP",
+		"0.411",
+		"0.657",
+		"0.534",
+		"82.24",
+		"52.48",
+		"61.34",
+		"88.26",
+		"62.2",
+		"72.93"
+		]]
+
+
+		sparsity2 = [[
+		"6",
+		"SurfaceNet+",
+		"0.448",
+		"0.437",
+		"0.442",
+		"87.35",
+		"73.59",
+		"78.29",
+		"91.73",
+		"78.08",
+		"83.21"
+		],
+		[
+		"7",
+		"SurfaceNet",
+		"0.455",
+		"1.011",
+		"0.733",
+		"81.62",
+		"65.79",
+		"70.96",
+		"86.67",
+		"69.77",
+		"75.56"
+		],
+		[
+		"8",
+		"Gipuma",
+		"0.292",
+		"1.124",
+		"0.708",
+		"94.66",
+		"55.14",
+		"67",
+		"96.84",
+		"60.87",
+		"72.18"
+		],
+		[
+		"9",
+		"R-MVSNet",
+		"0.471",
+		"0.499",
+		"0.485",
+		"86.96",
+		"60.04",
+		"67.99",
+		"95.05",
+		"65.71",
+		"74.69"
+		],
+		[
+		"10",
+		"COLMAP",
+		"0.49",
+		"1.108",
+		"0.799",
+		"82.05",
+		"50.58",
+		"61.07",
+		"89.86",
+		"56.76",
+		"69.17"
+		]]
+
+
+		sparsity3 = [[
+		"11",
+		"SurfaceNet+",
+		"0.446",
+		"0.482",
+		"0.464",
+		"86.06",
+		"74.41",
+		"78.15",
+		"90.87",
+		"78.25",
+		"82.91"
+		],
+		[
+		"12",
+		"SurfaceNet",
+		"0.461",
+		"0.997",
+		"0.729",
+		"83.02",
+		"61.09",
+		"68.87",
+		"88.31",
+		"66.39",
+		"74.41"
+		],
+		[
+		"13",
+		"Gipuma",
+		"0.267",
+		"1.252",
+		"0.759",
+		"95.51",
+		"50.88",
+		"64.63",
+		"97.49",
+		"50.33",
+		"63.68"
+		],
+		[
+		"14",
+		"R-MVSNet",
+		"0.465",
+		"1.012",
+		"0.738",
+		"89.55",
+		"48.03",
+		"59.28",
+		"96.96",
+		"57.92",
+		"69.04"
+		],
+		[
+		"15",
+		"COLMAP",
+		"0.467",
+		"1.090",
+		"0.778",
+		"78.45",
+		"49.26",
+		"59.62",
+		"91.44",
+		"55.98",
+		"65.77"
+		]]
+
+
+		sparsity4 = [[
+		"16",
+		"SurfaceNet+",
+		"0.495",
+		"0.467",
+		"0.478",
+		"87.06",
+		"72.14",
+		"77.41",
+		"91.36",
+		"77.15",
+		"82.57"
+		],
+		[
+		"17",
+		"SurfaceNet",
+		"0.452",
+		"0.956",
+		"0.704",
+		"78.24",
+		"53.88",
+		"62.17",
+		"83.42",
+		"58.88",
+		"67.50"
+		],
+		[
+		"18",
+		"Gipuma",
+		"0.482",
+		"1.248",
+		"0.865",
+		"91.95",
+		"46.65",
+		"59.76",
+		"94.95",
+		"55.16",
+		"67.71"
+		],
+		[
+		"19",
+		"R-MVSNet",
+		"0.46",
+		"1.425",
+		"0.9425",
+		"88.17",
+		"32.02",
+		"44.92",
+		"93.66",
+		"44.21",
+		"57.55"
+		],
+		[
+		"20",
+		"COLMAP",
+		"0.473",
+		"1.332",
+		"0.9025",
+		"82.05",
+		"38.28",
+		"51.27",
+		"92.05",
+		"56.18",
+		"67.23"
+		]]
+
+
+		sparsity5 = [[
+		"21",
+		"SurfaceNet+",
+		"0.466",
+		"0.491",
+		"0.469",
+		"88.58",
+		"71.63",
+		"77.48",
+		"92.86",
+		"76.04",
+		"82.28"
+		],
+		[
+		"22",
+		"SurfaceNet",
+		"0.445",
+		"0.948",
+		"0.701",
+		"81.07",
+		"58.62",
+		"66.55",
+		"85.40",
+		"62.76",
+		"70.97"
+		],
+		[
+		"23",
+		"Gipuma",
+		"0.46",
+		"1.633",
+		"1.046",
+		"92.38",
+		"38.53",
+		"52.36",
+		"95.1",
+		"48.15",
+		"61.78"
+		],
+		[
+		"24",
+		"R-MVSNet",
+		"0.329",
+		"2.209",
+		"1.269",
+		"89.26",
+		"20.51",
+		"31.6",
+		"93.99",
+		"32.74",
+		"46.37"
+		],
+		[
+		"25",
+		"COLMAP",
+		"0.443",
+		"1.284",
+		"0.8635",
+		"88.79",
+		"42.51",
+		"55.94",
+		"92.91",
+		"54.89",
+		"65.77"
+		]]
+
+
+		sparsity6 = [[
+		"26",
+		"SurfaceNet+",
+		"0.48",
+		"0.511",
+		"0.496",
+		"86.74",
+		"67.26",
+		"74.93",
+		"92.05",
+		"72.19",
+		"80.64"
+		],
+		[
+		"27",
+		"SurfaceNet",
+		"0.471",
+		"1.033",
+		"0.752",
+		"75.5",
+		"51.64",
+		"59.58",
+		"79.86",
+		"57.16",
+		"64.99"
+		],
+		[
+		"28",
+		"Gipuma",
+		"0.46",
+		"1.702",
+		"1.081",
+		"92.46",
+		"30.37",
+		"43.99",
+		"95.32",
+		"40.8",
+		"55.28"
+		],
+		[
+		"29",
+		"R-MVSNet",
+		"0.327",
+		"2.851",
+		"1.589",
+		"91.65",
+		"8.49",
+		"14.28",
+		"94.7",
+		"16.6",
+		"26.28"
+		],
+		[
+		"30",
+		"COLMAP",
+		"0.462",
+		"1.531",
+		"0.9965",
+		"76.6",
+		"35.49",
+		"32",
+		"77.55",
+		"50.21",
+		"52.52"
+		]]
+
+
+		sparsity7 = [[
+		"31",
+		"SurfaceNet+",
+		"0.445",
+		"0.88",
+		"0.663",
+		"85.81",
+		"51.52",
+		"61.54",
+		"90.05",
+		"55.41",
+		"65.99"
+		],
+		[
+		"32",
+		"SurfaceNet",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty"
+		],
+		[
+		"33",
+		"Gipuma",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty"
+		],
+		[
+		"34",
+		"R-MVSNet",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty"
+		],
+		[
+		"35",
+		"COLMAP",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty",
+		"empty"
+		]]
+
+    var t = 1
+  	function load_table() {
+	    t = $('#dataTable').DataTable( {
+	    	"destroy": true,
+	    	'paging':false,
+	    	"bAutoWidth": true,
+	    	"bFilter": false,
+	     	"aoColumnDefs": [
+	          { 'bSortable': false, 'aTargets': [ 0 ] }
+	       ]
+	    } );
+
+	    t.on( 'order.dt search.dt', function () {
+	    	t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+	        	cell.innerHTML = i+1;
+	   		 } );
+		} ).draw(); 
+
+	  	t.on('order.dt', function(){
+	  		var sorted_col = $('#dataTable').dataTable().fnSettings().aaSorting[0][0]
+	  		$( t.cells().nodes() ).removeClass( 'highlight' )
+	  		$(t.column(sorted_col).nodes()).addClass('highlight')
+	  	}); 
+  	}
+
+  	//$('#dataTable tbody').html(sp1)	
+
+   	load_table();
+
+
+
+ 	t.rows.add(sparsity1).draw(false);
+
+  	$('#selector').change(function() {
+  		var checkValue = $('#selector').val()
+  		switch(checkValue) {
+  			case "1":
+			  	t.clear().draw();
+			  	t.rows.add(sparsity1).draw();
+				break;
+			case "2":
+			  	t.clear().draw();
+			  	t.rows.add(sparsity2).draw();
+				break;
+			case "3":
+			  	t.clear().draw();
+			  	t.rows.add(sparsity3).draw();
+				break;
+			case "4":
+				t.clear().draw();
+				t.rows.add(sparsity4).draw();
+				break;
+			case "5":
+				t.clear().draw();
+				t.rows.add(sparsity5).draw();
+				break;
+			case "6":
+				t.clear().draw();
+				t.rows.add(sparsity6).draw();
+				break;
+			case "7":
+				t.clear().draw();
+				t.rows.add(sparsity7).draw();
+			}
+  	})
+
+
+  
+    </script>
 </body>
 
 </html>
