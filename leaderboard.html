@@ -30,7 +30,7 @@
 
 </head>
 
-<body>
+<body style="padding-top: 75px;">
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -800,7 +800,9 @@
 	    t.on( 'order.dt search.dt', function () {
 	    	t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
 	    		var sorted_dir = $('#dataTable').dataTable().fnSettings().aaSorting[0][1]
-	    		if (sorted_dir == "desc") {
+	    		var sorted_col = $('#dataTable').dataTable().fnSettings().aaSorting[0][0]
+	    		flag = (sorted_col == 2 || sorted_col == 3 || sorted_col == 4) ^ sorted_dir == "desc"
+	    		if (flag) {
 	        		cell.innerHTML = i+1;
 	        	} else {
 	        		cell.innerHTML = sparsity1.length - i;
